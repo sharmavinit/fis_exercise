@@ -1,6 +1,5 @@
 package common;
 
-import io.cucumber.java.Scenario;
 import stepDefinitions.Hooks;
 
 public class Validations {

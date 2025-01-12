@@ -1,6 +1,7 @@
 #Author: vinita sharma
-#Keywords Summary : 
+#Keywords Summary: This feature file launches ebay website, search for an item 'book' then add very given nth itme from search list and then verifies that the cart value is updated after adding item to cart
 
+@functional-test @test-exercise
 Feature: Add item to the cart 
   I want to use this template for my feature file
 
@@ -8,7 +9,7 @@ Background:
 	  Given User launch application url https://www.ebay.com/
     Then User verifies Page Title as Electronics, Cars, Fashion, Collectibles & More | eBay
 
-  @addItemToCart @functional-test
+  @addItemToCart
   Scenario: Add item to cart and verify the cart value is updated
     Given User launch application url https://www.ebay.com/
     Then User verifies Page Title as Electronics, Cars, Fashion, Collectibles & More | eBay
