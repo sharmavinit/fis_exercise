@@ -102,12 +102,10 @@ public class UiActions {
 
 	public void takeScreenShot(String name) {
 		File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-
-		// Define the destination for the screenshot
+	
 		File destinationFile = new File("target/screenshots/" + name + ".png");
 
 		try {
-			// Copy the screenshot to the destination
 			FileUtils.copyFile(screenshot, destinationFile);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -118,7 +116,6 @@ public class UiActions {
 		try {
 			screenshotBytes = FileUtils.readFileToByteArray(destinationFile);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		Hooks.scenario.attach(screenshotBytes, "image/png", "Screenshot");

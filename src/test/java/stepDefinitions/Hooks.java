@@ -5,7 +5,6 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 
 import common.DriverManager;
-import common.Validations;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -24,7 +23,6 @@ public class Hooks {
     		driver.manage().timeouts().pageLoadTimeout(20,TimeUnit.SECONDS);
     		
     		this.scenario= scenario;
-    		System.out.println(scenario);
     	}
 
     @After

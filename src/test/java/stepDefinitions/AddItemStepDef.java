@@ -22,7 +22,6 @@ public class AddItemStepDef {
 	@Then("User verifies Page Title as (.*?)$")
 	public void user_verifies_page_title_as_electronics_cars_fashion_collectibles_more_e_bay(String expectedTitle) {
 		 String pageTitle= action.getPageTitle();
-		   System.out.println(pageTitle);
 		   Assert.assertTrue("Verify page title",validation.verifyActualEqualsExpected(pageTitle, expectedTitle));
 	}
 	

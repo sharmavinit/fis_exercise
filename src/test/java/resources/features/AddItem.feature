@@ -4,8 +4,12 @@
 Feature: Add item to the cart 
   I want to use this template for my feature file
 
-  @addItem @functional-test
-  Scenario: Verify item can be added to Cart
+Background:
+	  Given User launch application url https://www.ebay.com/
+    Then User verifies Page Title as Electronics, Cars, Fashion, Collectibles & More | eBay
+
+  @addItemToCart @functional-test
+  Scenario: Add item to cart and verify the cart value is updated
     Given User launch application url https://www.ebay.com/
     Then User verifies Page Title as Electronics, Cars, Fashion, Collectibles & More | eBay
     And User check for item number in cart
